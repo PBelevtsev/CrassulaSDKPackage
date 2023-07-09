@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import AFNetworking
 
 class CrassulaConfigManager {
     
@@ -14,6 +15,8 @@ class CrassulaConfigManager {
     
     func connect(domain: String) {
         print("domain \(domain)")
+        
+        
     }
     
 }
