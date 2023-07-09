@@ -12,4 +12,7 @@ public struct CrassulaSDKPackage {
         CrassulaConfigManager.shared.connect(domain: domain)
     }
     
+    public func disConnect() {
+        
+    }
 }
