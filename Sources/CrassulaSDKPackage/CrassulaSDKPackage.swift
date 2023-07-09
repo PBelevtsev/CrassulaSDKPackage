@@ -1,6 +1,6 @@
 public struct CrassulaSDKPackage {
     
-    static let shared = CrassulaSDKPackage()
+    public static let shared = CrassulaSDKPackage()
     
     public private(set) var text = "Hello, World!"
 
@@ -8,7 +8,7 @@ public struct CrassulaSDKPackage {
         
     }
     
-    func connect(domain: String) {
+    public func connect(domain: String) {
         CrassulaConfigManager.shared.connect(domain: domain)
     }
     
