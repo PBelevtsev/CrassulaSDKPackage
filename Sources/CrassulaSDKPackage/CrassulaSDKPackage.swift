@@ -3,4 +3,9 @@ public struct CrassulaSDKPackage {
 
     public init() {
     }
+    
+    func connect(domain: String) {
+        CrassulaConfigManager.shared.connect(domain: domain)
+    }
+    
 }
