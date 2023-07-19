@@ -23,7 +23,7 @@ enum AccountOperationType : String, CaseIterable {
     case cryptoTransfer = "crypto_transfer"
 }
 
-public class Account: NSObject, Decodable {
+public class Account: Decodable {
     var number: String = ""
     var status: Int8 = 0
     var type: Int8 = 0
@@ -171,10 +171,6 @@ public class Account: NSObject, Decodable {
         } catch { }
         self.provider = try container.decodeIfPresent(AccountProvider.self, forKey: .provider)
         self.dynamicPayment = try container.decodeIfPresent(Bool.self, forKey: .dynamicPayment) ?? true
-    }
-    
-    override init() {
-        super.init()
     }
     
     func balanceAvailable(currency: String) -> Double {

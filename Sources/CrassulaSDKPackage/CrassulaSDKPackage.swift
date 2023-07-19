@@ -21,4 +21,9 @@ public struct CrassulaSDKPackage {
         
         CrassulaUserManager.shared.accounts(completionHandler)
     }
+    
+    public func transactions(limit: Int = 100, page: Int = 1, filters: [RequestFilter], _ completionHandler: @escaping (_ transactions: Transactions?, _ error: Error?) -> ()) {
+        
+        CrassulaUserManager.shared.transactions(limit: limit, page: page, filters: filters, completionHandler)
+    }
 }
